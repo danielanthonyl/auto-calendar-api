@@ -16,8 +16,8 @@ app.post("/upload", upload.single('image'), async (req, res) => {
     console.log("file uploaded: ", req.file);
     
     const worker = await createWorker('eng'); 
-    const ret = await worker.recognize('https://tesseract.projectnaptha.com/img/eng_bw.png');
-    //const ret = await worker.recognize(req.file.buffer);
+    // const ret = await worker.recognize('https://tesseract.projectnaptha.com/img/eng_bw.png');
+    const ret = await worker.recognize(req.file.buffer);
 
     res.status(200).json({ message: ret.data.text });  
     await worker.terminate();
