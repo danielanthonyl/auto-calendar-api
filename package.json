@@ -1,0 +1,21 @@
+{
+  "name": "auto-calendar",
+  "module": "api/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun run ./api/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^4.17.21",
+    "vercel": "^34.2.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "tesseract.js": "^5.1.0"
+  }
+}
