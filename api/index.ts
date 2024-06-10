@@ -1,11 +1,14 @@
 import express from 'express';
 import multer from 'multer';
 import { createWorker } from 'tesseract.js';
+import cors from 'cors';
 
 const app = express();
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
+
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.status(200).json({ message: "system working ok. 0.0.1" });
